@@ -1,6 +1,8 @@
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.net.SocketOption;
 import java.net.SocketPermission;
+import java.util.Scanner;
+
 
 public class main {
     public static void main(String[] args) {
@@ -40,6 +42,21 @@ public class main {
 
 //
 //        int three = (int) "three";
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter something: ");
+        String userInput = scanner.next();
+
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
+
+        double pi = 3.14159;
+
+       // System.out.println("the value of pi is approxomitely \"" + pi + "\"");
+
     }
 }
+
+
 
