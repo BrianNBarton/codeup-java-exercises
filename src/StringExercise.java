@@ -7,23 +7,23 @@ public class StringExercise {
     public static void main(String[] args) {
 
 
-        String PinkFloyd =
+        String message =
                 "We don't need no education\n" +
                         "We don't need no thought control";
 
 
-        System.out.println(PinkFloyd);
+        System.out.println(message);
 
 
-        String NewString = "Check \"this\" out!, \"s inside of \"s!";
-        System.out.println(NewString);
+         message = "Check \"this\" out!, \"s inside of \"s!";
+        System.out.println(message);
 
-        String ThisOtherString = "In windows, the main drive is usually C:\"";
-        System.out.println(ThisOtherString);
+       message = "In windows, the main drive is usually C:\"";
+        System.out.println(message);
 
-        String YetAnotherString = "I can do backslashes \\, double backslashes \\\\,\n" +
+        message = "I can do backslashes \\, double backslashes \\\\,\n" +
                 "and the amazing triple backslash \\\\\\!";
-        System.out.println(YetAnotherString);
+        System.out.println(message);
 
     }
 
