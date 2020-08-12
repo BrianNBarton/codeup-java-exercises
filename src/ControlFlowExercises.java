@@ -9,12 +9,13 @@ class ControlFlowExercises {
      */
     public static void main (String[] args) {
         ControlFlowExercises cfe = new ControlFlowExercises();
-        cfe.whileTest();
-//        cfe.doTest();
-//        cfe.forTest();
-//        cfe.fizzBuxx();
-//        cfe.printPowerTable();
-//        cfe.grades();
+      //  cfe.whileTest();
+//      cfe.doTest();
+//      cfe.forTest();
+//      cfe.fizzBuxx();
+//      cfe.printPowerTable();
+
+        cfe.grades();
         System.out.printf("\nThe sums of 7 is %d\n", sumNums(7));
     }
 

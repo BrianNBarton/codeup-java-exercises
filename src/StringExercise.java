@@ -14,7 +14,6 @@ public class StringExercise {
 
         System.out.println(message);
 
-
          message = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(message);
 
