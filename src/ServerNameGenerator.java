@@ -1,9 +1,11 @@
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 public class ServerNameGenerator {
 
 
-    public static void main(String arg[]){
+    public static void main(String[] arg){
         //Object to get user input
         Scanner in = new Scanner(System.in);
 
@@ -18,12 +20,11 @@ public class ServerNameGenerator {
 
         for(int i = 0; i < numberOfTest; i++){
             int index = (int)(Math.random() * 10);
-            System.out.println(Adjectives[index] + " " + Nouns[index]);
+            int index2 = (int)(Math.random() * 10);
+            System.out.println(Adjectives[index] + "-" + Nouns[index2]);
         }
     }
 
 
 }
-//    public String[] Adjectives = { "Crunchy", "Spicy", "Humid", "Happy", "Focused", "Shaggy", "Muffled", "Hollow", "Fast", "Old"};
-//
-//    public String[] Nouns = { "Dog", "Cat", "Ferret", "Birb", "Turtle", "Chameleon", "Fern", "Orchid", "Carrot", "Chips" } ;
+

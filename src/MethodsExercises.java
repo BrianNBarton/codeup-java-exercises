@@ -5,6 +5,7 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import java.util.*;
+
 public class MethodsExercises {
     public static void main(String[] args) {
 //        System.out.println(exPonent(6,2));
@@ -12,7 +13,10 @@ public class MethodsExercises {
 //        System.out.println(minusStuff(18, 10));
 //        System.out.println(Quotient(10 , 2))
 //        System.out.println(ModuloNumbers(7, 3));
-
+        //  System.out.println(factorial(4));
+      //  System.out.println(multiply(5, 5));
+        //   diceGame();
+        // getInteger(1,10);
 //        Scanner in = new Scanner(System.in);
 //        System.out.print("Input the first number: ");
 //        int n1 = in.nextInt();
@@ -20,11 +24,11 @@ public class MethodsExercises {
 //        int n2 = in.nextInt();
 //        System.out.println("\nResult: " + multiply(n1,n2));
 
-
-        Person rick = new Person();
-        rick.firstName = "Rick";
-        rick.lastName = "Sanchez";
-        System.out.println(rick.sayHello());
+//
+//        Person rick = new Person();
+//        rick.firstName = "Rick";
+//        rick.lastName = "Sanchez";
+//        System.out.println(rick.sayHello());
     }
 
 
@@ -70,6 +74,7 @@ public class MethodsExercises {
 
         return result;
     }
+
     static class Person {
         public String firstName;
         public String lastName;
@@ -78,7 +83,68 @@ public class MethodsExercises {
             return String.format("Hello from %s %s!", firstName, lastName);
         }
 
-            // prints "Hello from Rick Sanchez!"
-        }
+        // prints "Hello from Rick Sanchez!"
     }
+
+    public static long factorial(int n) {
+        int fact = 1;
+        for (int i = 2; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+
+    public static void diceGame() {
+        String rollDice = "";
+        do {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter number of sides for pair of dice: ");
+            int numSides = scan.nextInt();
+            int die1 = rollDie(numSides);
+            int die2 = rollDie(numSides);
+            System.out.println(String.format("You rolled %d and %d for a total of %d", die1, die2, die1 + die2));
+            System.out.print("Would you like to roll again? (Y/N)");
+            rollDice = scan.next().toLowerCase();
+            System.out.println(rollDice);
+        } while (!rollDice.equals("n"));
+        System.out.println("DiceGame done.");
+    }
+
+    public static int rollDie(int dieSides) {
+        int rand = (int) (Math.random() * dieSides);
+        return rand;
+    }
+
+
+//    public static int getInteger(int min, int max) {
+//        boolean doAgain = true;
+//        int num = 0;
+//        do {
+//            num = sc.nextInt();
+//            if (num < min || num > max) {
+//                System.out.printf("\nvalue out of %d range\n", num);
+//                System.out.printf("enter a number btwn %d and %d: ", min, max);
+//            } else {
+//                doAgain = false;
+//
+//
+//            }
+//            while (doAgain) ;
+//            return num;
+//        }
+    }
+
+//
+//        Scanner sc = new Scanner(System.in);
+//        int userInput = sc.nextInt();
+//        if (userInput < min || userInput > max) {
+//            System.out.print("wrong bud");
+//            getInteger(min, max);
+//        }
+//        System.out.println("correct");
+//        return userInput;
+
+
+
+
 
