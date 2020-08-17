@@ -10,24 +10,30 @@ public class Movie {
  public void setName(String name) {
      this.name = name; }
 
+
+
+
+    public Movie(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
 
-    public String setCategory(){
-      this.name = setCategory();
-    }
-
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
     public Movie(String name, String category) {
-     setName(name);
-     setCategory(category);
+     this.name = name;
+    this.category = category;
     }
 
-    //It should have private fields for name and category,
+    public void setCategory(String category) {
+        this.category = category;
+    }
+//It should have private fields for name and category,
 
 
     // and a constructor that sets both of these.
