@@ -18,6 +18,7 @@ public abstract class Quadrilateral extends Shape{
     }
 
     public double getWidth() {
+
         return width;
     }
 
