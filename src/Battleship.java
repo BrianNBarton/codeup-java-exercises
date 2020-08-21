@@ -23,7 +23,7 @@ public class Battleship {
         System.out.println("+---+---+---+---+---+---+---++---+---+---+---+---+---+---+");
         System.out.println("| o | o | o | o | o | o | o || o | x | o | x | o | x | o |");
         System.out.println("+---+---+---+---+---+---+---++---+---+---+---+---+---+---+");
-        System.out.println("| o | o | o | o | o | o | o || o | x | o | x | o | x | o |");o
+        System.out.println("| o | o | o | o | o | o | o || o | x | o | x | o | x | o |");
 
 
 
