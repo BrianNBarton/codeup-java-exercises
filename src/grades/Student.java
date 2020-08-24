@@ -1,44 +1,67 @@
 package grades;
 
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student {
 
+    public static void main(String[] args) {
 
-    private String name;
-    private ArrayList<Integer> grades = new ArrayList<>();
+        Student Bob = new Student("Bob Dyllan");
+        Bob.addGrade(33);
+        Bob.addGrade(44);
+        Bob.addGrade(70);
+        Bob.addGrade(85);
+        Bob.addGrade(100);
+        System.out.println(Bob.getName() + "'s grade avg: " + Bob.getGradeAverage());
+    }
+
+    private final String name;
+    private final ArrayList<Integer> grades;
+    private final HashMap<String, String> attendance;
 
     public Student(String name) {
         this.name = name;
+        this.grades = new ArrayList<>();
+        this.attendance = new HashMap<>();
     }
-
-    // returns the student's name
+    //Return student name
     public String getName() {
-        return name;
+        return this.name;
+    }
+
+    //adding in the grade to the grades prop
+    public void addGrade(int grade){
+        this.grades.add(grade);
+    }
+    public ArrayList<Integer> getGrades(){
+        return this.grades;
     }
 
 
-    public void setName(String name) {
-        this.name = name;
+    public double getGradeAverage() {
+        int sum = 0;
+
+        for(double grade: this.grades) {
+            sum += grade;
+        }
+        return (double) sum / this.grades.size();
     }
-
-    // adds the given grade to the grades property
-    public void addGrade(int grade) {
-        grades.add(grade);
+    public void Attendance(String date, String value) {
+        this.attendance.put(date, value);
     }
-
-    // returns the average of the students grades
-    public void getGradeAverage() {
-        //total / length
+    public HashMap<String, String> getAttendance() {
+        return this.attendance;
     }
+    public double attendancePercentage() {
+        double absences = 0;
 
-
-    public static void main(String[] args) {
-
-
-      //  Student student1 = new Student("Bob Dillon");
-
-       // student1.addGrade(92);
+        for(String a: this.attendance.values()) {
+            if(a.equals("A")) {
+                absences++;
+            }
+        }
+        return ((this.attendance.size() - absences) / this.attendance.size()) * 100;
     }
 }

@@ -30,14 +30,13 @@ public class MoviesApplication {
         );
 
 
-
         boolean keepGoing = true;
 
         while (keepGoing) {
-        int input = scanner.nextInt();
+            int input = scanner.nextInt();
             switch (input) {
                 case 0:
-                keepGoing = false;
+                    keepGoing = false;
                     break;
 
                 case 1:
