@@ -13,7 +13,6 @@ public class Student {
         Bob.addGrade(44);
         Bob.addGrade(70);
         Bob.addGrade(85);
-        Bob.addGrade(100);
         System.out.println(Bob.getName() + "'s grade avg: " + Bob.getGradeAverage());
     }
 
@@ -54,7 +53,7 @@ public class Student {
     public HashMap<String, String> getAttendance() {
         return this.attendance;
     }
-    public double attendancePercentage() {
+    public double attendanceAvg() {
         double absences = 0;
 
         for(String a: this.attendance.values()) {
