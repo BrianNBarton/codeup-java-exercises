@@ -6,8 +6,9 @@ public class Input {
 
     private Scanner scanner;
 
-    public Input(){
-        this.scanner = new Scanner(System.in);
+
+    public Input() {
+        this.scanner = new Scanner(System.in).useDelimiter("\n");
     }
 
     public String getString(){
@@ -69,6 +70,16 @@ public class Input {
         System.out.print(prompt);
         return this.scanner.nextDouble();
     }
+    public int getHex() {
+        try {
+            String input = this.scanner.next();
+            return Integer.valueOf(input, 16);
+        } catch (NumberFormatException e) {
+            System.out.println("The input was invalid, please try again:");
+            return getHex();
+        }
+    }
+
 
 
 }

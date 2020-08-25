@@ -16,6 +16,8 @@ public class InputTest {
         System.out.println(input.getDouble());
         System.out.println(input.getDouble("Enter a double: "));
 
-
+        System.out.println("Please input a hex number");
+        int someHex = input.getHex();
+        System.out.println(someHex);
     }
 }
