@@ -41,7 +41,7 @@ public class Input {
         } while (min>=userInput&&userInput<=max);
         return userInput;
     }
-
+//updated
     public int getInt() {
         System.out.print("Enter an integer: ");
         return this.scanner.nextInt();
@@ -65,7 +65,7 @@ public class Input {
         System.out.print("Enter a double: ");
         return this.scanner.nextDouble();
     }
-
+//updated
     public double getDouble(String prompt) {
         System.out.print(prompt);
         return this.scanner.nextDouble();
