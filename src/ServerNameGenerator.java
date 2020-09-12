@@ -1,6 +1,7 @@
 import java.util.*;
 
-public class ServerNameGenerator {
+public class
+ServerNameGenerator {
 
     private String[] Adjectives;
 
@@ -30,6 +31,9 @@ public class ServerNameGenerator {
         String[] Adjectives = {"Crunchy", "Spicy", "Humid", "Happy", "Focused", "Shaggy", "Silly", "Tenacious", "Fast", "hot"};
 
         String[] Nouns = {"Dog", "Cat", "Ferret", "Birb", "Turtle", "Chameleon", "Fern", "Orchid", "Carrot", "Chips"};
+
+//        String[] Char = { "a", "a", "b", "B", "c", "c", "!", "@",
+//        }
 
         System.out.print("How many Server Names do you want: ");
         //Get user input

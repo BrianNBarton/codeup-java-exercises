@@ -19,8 +19,10 @@ public class HighorLow {
         Scanner scanner = new Scanner(System.in);
         // Use the random generator to
         // pick a number between 0 and 99 (inclusive)
-        int number = random.nextInt(100);
-        int guess = -1;
+        double number = random.nextInt(100);
+        double guess = -1;
+
+        
         // Loop until the user has guessed the number
         while (guess != number) {
             // Prompt the user for their next guess
@@ -41,7 +43,7 @@ public class HighorLow {
         }
     }
 
-    int thisFunction(int x) {
+    double thisFunction(double x) {
         return x + 3;
     }
 }

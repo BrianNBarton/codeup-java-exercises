@@ -8,13 +8,13 @@ public class Student {
 
     public static void main(String[] args) {
 
-        Student Bob = new Student("Bob Dyllan");
-        Bob.addGrade(33);
-        Bob.addGrade(44);
-        Bob.addGrade(70);
-        Bob.addGrade(85);
-        System.out.println(Bob.getName() + "'s grade avg: " + Bob.getGradeAverage());
-    }
+//        Student Bob = new Student("Bob Dyllan");
+//        Bob.addGrade(33);
+//        Bob.addGrade(44);
+//        Bob.addGrade(70);
+//        Bob.addGrade(85);
+//        System.out.println(Bob.getName() + "'s grade avg: " + Bob.getGradeAverage());
+}
 
     private final String name;
     private final ArrayList<Integer> grades;

@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
-        HashMap<String, Student> students = new HashMap<>();
+        int addGrade = 0;
+        HashMap<String, Student> students = new HashMap<>(addGrade);
 
         //Student list
 
