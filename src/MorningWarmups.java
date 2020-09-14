@@ -14,7 +14,8 @@ public static void main(String[] args) {
 
 
 }
-
+// given an array of integers, find the index of the two numbers that will return
+// the targeted number.
     public static int[] twoSum(int[] nums, int target) {
         if(nums==null || nums.length<2)
             return new int[]{0,0};
@@ -30,5 +31,23 @@ public static void main(String[] args) {
 
         return new int[]{0,0};
     }
-}
+//
+//    We have two special characters.
+//    The first character can be represented by one bit 0.
+//    The second character can be represented by two bits (10 or 11).
+//
+//    Now given a string represented by several bits.
+//    Return whether the last character must be a one-bit character or not.
+//    The given string will always end with a zero.
+
+        public boolean isOneBitCharacter(int[] bits) {
+            int i = 0;
+            while (i < bits.length - 1) {
+                i += bits[i] + 1;
+            }
+            return i == bits.length - 1;
+        }
+    }
+
+
 
