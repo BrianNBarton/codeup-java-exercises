@@ -205,7 +205,37 @@ class Solution {
             }
             return ans;
         }
+
+
+   // Given an array nums with n objects colored red, white, or blue,
+   // sort them in-place so that objects of the same color are adjacent,
+   // with the colors in the order red, white, and blue.
+    public void sortColors(int[] nums) {
+        // 0 to j-1--> 0 Area
+        // k+1 to end --> 2's Area
+        //j to i-1-->1's Area
+        //i to k-1--> Unknown Area
+        // Source -->Pepcoding youtube channel
+        int i=0,j=0,k=nums.length-1;
+        while(i<=k){
+            if(nums[i]==0){
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                i++;
+                j++;
+            }else if(nums[i]==1){
+                i++;
+            }else{
+                int temp=nums[i];
+                nums[i]=nums[k];
+                nums[k]=temp;
+                k--;
+            }
+        }
     }
+}
+
 
 
 //learn about Listnodes
