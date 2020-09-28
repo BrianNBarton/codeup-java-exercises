@@ -478,7 +478,35 @@ public class leetCodeSolutions {
         }
         return fib (N-1) + fib (N-2);
     }
+//    A boomerang is a set of 3 points that are all distinct and not in a straight line.
+//
+//    Given a list of three points in the plane, return whether these points are a boomerang.
+
+
+    public boolean isBoomerang(int[][] points) {
+        int x1 ,x2,y1,y2,x3,y3 ;
+        //get first points coordinates
+        x1=points[0][0];
+        y1=points[0][1];
+        //get second point coordinates;
+        y2=points[1][1];
+        x2=points[1][0];
+        //get third point coordinates
+        x3 = points[2][0];
+        y3=points[2][1];
+
+        return !((y2-y1) * (x3-x2) == (y3-y2)* (x2-x1));
+    }
+    public String reverseWords(String s) {
+        String words[] = s.split(" ");
+        StringBuilder res=new StringBuilder();
+        for (String word: words)
+            res.append(new StringBuffer(word).reverse().toString() + " ");
+        return res.toString().trim();
+    }
+
 }
+
 
 
 
