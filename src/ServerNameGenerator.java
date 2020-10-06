@@ -13,6 +13,9 @@ ServerNameGenerator {
   }
 
     public static void main(String[] arg) {
+
+
+        System.out.println("this stuffd");
         //Object to get user input
 
    //     ServerNameGenerator sname = new ServerNameGenerator();
@@ -29,6 +32,7 @@ ServerNameGenerator {
         String[] starters = {"the", "a" };
 ;
         String[] Adjectives = {"Crunchy", "Spicy", "Humid", "Happy", "Focused", "Shaggy", "Silly", "Tenacious", "Fast", "hot"};
+
 
         String[] Nouns = {"Dog", "Cat", "Ferret", "Birb", "Turtle", "Chameleon", "Fern", "Orchid", "Carrot", "Chips"};
 
