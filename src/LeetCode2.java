@@ -90,5 +90,18 @@ public class LeetCode2 {
 
         return result[n];
     }
+    //Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+
+    public int subtractProductAndSum(int n) {
+        String s = String.valueOf(n);
+        int sum = 0;
+        int product = 1;
+        for(int i=0; i<s.length(); i++) {
+            int digit = Integer.parseInt(String.valueOf(s.charAt(i)));
+            sum += digit;
+            product *= digit;
+        }
+        return product - sum;
+    }
 
 }
