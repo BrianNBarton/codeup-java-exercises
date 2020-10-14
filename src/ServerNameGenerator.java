@@ -33,7 +33,7 @@ ServerNameGenerator {
 ;
         String[] Adjectives = {"Crunchy", "Spicy", "Humid", "Happy", "Focused", "Shaggy", "Silly", "Tenacious", "Fast", "hot"};
 
-
+        String[] adj2 = {""};
         String[] Nouns = {"Dog", "Cat", "Ferret", "Birb", "Turtle", "Chameleon", "Fern", "Orchid", "Carrot", "Chips"};
 
 //        String[] Char = { "a", "a", "b", "B", "c", "c", "!", "@",

@@ -126,5 +126,11 @@ public class LeetCode2 {
         List<String> res = new ArrayList<String>(set); // convert hashset to list
         return res;
     }
-
+    public int numIdenticalPairs(int[] A) {
+        int res = 0, count[] = new int[101];
+        for (int a: A) {
+            res += count[a]++;
+        }
+        return res;
+    }
 }
