@@ -15,24 +15,26 @@ class janken {
 //        randomly generate a move
         int rand = (int) (Math.random() * 3);
         String opponentMove = "";
-            if(rand == 0) {
-                opponentMove = "rock";
-            } else if(rand == 1) {
-                opponentMove = "paper";
-            } else {
-                opponentMove = "scissors";
-            }
+        if (rand == 0) {
+            opponentMove = "rock";
+        } else if (rand == 1) {
+            opponentMove = "paper";
+        } else {
+            opponentMove = "scissors";
+        }
         System.out.println("opponent move : " + opponentMove);
 
-            //win lose draw cases
-        if(myMove.equals(opponentMove)) {
+        //win lose draw cases
+        if (myMove.equals(opponentMove)) {
             System.out.println("tie!");
-        } else if((myMove.equals("rock") && opponentMove.equals("scissors")) ||
+        } else if ((myMove.equals("rock") && opponentMove.equals("scissors")) ||
                 (myMove.equals("scissors") && opponentMove.equals("paper")) ||
-                        (myMove.equals("paper") && opponentMove.equals("rock"))) {
+                (myMove.equals("paper") && opponentMove.equals("rock"))) {
             System.out.println("winner!!");
-    } else {
+        } else {
             System.out.println("LOSER HAHA");
         }
+
     }
+
 }
