@@ -2,10 +2,40 @@
 //
 //import javax.swing.tree.TreeNode;
 //import java.util.*;
-//
-//public class LeetCode2 {
-//    public static void main(String[] args) {
-//
+
+public class LeetCode2 {
+
+
+
+    private int maxSubArray(int[] nums, int start, int end) {
+        if(start == end) return nums[start];
+
+        int mid = start + (end - start) / 2;
+        int leftSum = maxSubArray(nums, start, mid);
+        int rightSum = maxSubArray(nums, mid+1, end);
+        int crossSum = maxCrossSum(nums, start, mid, end);
+
+        return Math.max(leftSum, Math.max(rightSum, crossSum));
+    }
+
+    private int maxCrossSum(int[] nums, int start, int mid, int end) {
+        int leftSum = Integer.MIN_VALUE;
+        int sum = 0;
+        for(int i=mid; i>=start; i--) {
+            sum = sum + nums[i];
+            if(sum > leftSum)
+                leftSum = sum;
+        }
+        sum=0;
+        int rightSum = Integer.MIN_VALUE;
+        for(int j=mid+1; j<=end; j++) {
+            sum = sum + nums[j];
+            if(sum > rightSum)
+                rightSum = sum;
+        }
+        return leftSum + rightSum;
+    }
+}
 // String[] thisSting = {"sos"};
 //
 //        System.out.println(uniqueMorseRepresentations(thisSting));
@@ -177,3 +207,5 @@
 //                isSameTree(p.left, q.left);
 //    }
 //}
+
+
